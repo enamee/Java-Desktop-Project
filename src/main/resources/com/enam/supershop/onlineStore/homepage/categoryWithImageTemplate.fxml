@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="categoryItem" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#goToCategoryPage" prefWidth="90.0" styleClass="category" stylesheets="@categoryWithImageTemplate.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.enam.supershop.onlineStore.homepage.CategoryWithImageTemplate">
+   <children>
+      <StackPane fx:id="categoryImageContainer" maxHeight="-Infinity" maxWidth="-Infinity" styleClass="categoryImageContainer">
+         <children>
+            <ImageView fx:id="categoryImage" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" styleClass="categoryImage">
+               <image>
+                  <Image url="@../../../../../images/no-image.png" />
+               </image></ImageView>
+         </children>
+      </StackPane>
+      <Label fx:id="categoryName" styleClass="categoryLabel" text="Category" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

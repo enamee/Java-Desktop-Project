@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@item.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.enam.supershop.onlineStore.cart.Item">
+   <children>
+      <Button fx:id="remove" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="×">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <HBox.margin>
+            <Insets right="5.0" />
+         </HBox.margin>
+      </Button>
+      <ImageView fx:id="image" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../images/no-image.png" />
+         </image>
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin>
+      </ImageView>
+      <VBox alignment="CENTER_LEFT" prefWidth="150.0">
+         <children>
+            <Label fx:id="name" text="Product Name" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <HBox spacing="1.0">
+               <children>
+                  <Label fx:id="price" text="Price" />
+                  <Label text="/" />
+                  <Label fx:id="unit" text="Unit" />
+               </children>
+            </HBox>
+            <Label fx:id="discountedPrice" text="New Price" />
+         </children>
+         <HBox.margin>
+            <Insets right="20.0" />
+         </HBox.margin>
+      </VBox>
+      <HBox fx:id="quantityPill" alignment="CENTER" spacing="5.0">
+         <children>
+            <Button fx:id="decrease" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="–">
+               <padding>
+                  <Insets bottom="-1.0" top="-1.0" />
+               </padding>
+            </Button>
+            <Label fx:id="quantity" alignment="CENTER" prefWidth="20.0" text="999" textAlignment="CENTER" />
+            <Button fx:id="increase" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" text="+">
+               <padding>
+                  <Insets bottom="-1.0" top="-1.0" />
+               </padding>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="3.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+         <HBox.margin>
+            <Insets right="20.0" />
+         </HBox.margin>
+      </HBox>
+      <Label fx:id="subtotal" text="Sub Total" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="15.0" right="20.0" top="10.0" />
+   </padding>
+</HBox>

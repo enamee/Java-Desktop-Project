@@ -1,0 +1,19 @@
+/*.container {*/
+/*    -fx-background-color: white;*/
+/*}*/
+
+.categoryImageContainer {
+    -fx-background-color: #f2f2f2;
+    -fx-background-radius: 50%;
+    -fx-border-width: 2px;
+    /*-fx-border-radius: 50%;*/
+    -fx-border-color: #d9d9d9;
+}
+
+.category:hover .categoryImageContainer {
+    -fx-border-color: #358AE0;
+}
+
+.category:hover .categoryLabel {
+    -fx-text-fill: #358AE0;
+}

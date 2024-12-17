@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="container" stylesheets="@admin.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.enam.supershop.admin.AdminController">
+   <top>
+      <HBox fx:id="header" alignment="CENTER_LEFT" prefWidth="1168.0" styleClass="container" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="logo" fitHeight="71.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/logo_small.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <VBox fx:id="sidebar" prefHeight="200.0" prefWidth="114.0" BorderPane.alignment="CENTER">
+         <children>
+            <Accordion>
+               <panes>
+                  <TitledPane animated="false" collapsible="false" styleClass="accordionSelector" text="Home">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TitledPane>
+                  <TitledPane animated="false" collapsible="false" styleClass="selector" text="Profile">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" styleClass="selector" text="Employees">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <content>
+                        <Accordion>
+                          <panes>
+                            <TitledPane animated="false" collapsible="false" text="Add Employee" />
+                            <TitledPane animated="false" collapsible="false" text="Employee Details" />
+                          </panes>
+                        </Accordion>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="69.0" styleClass="selector" text="Leaves">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <content>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false" collapsible="false" text="Apply Leave" />
+                              <TitledPane animated="false" collapsible="false" text="Leave Requests" />
+                           </panes>
+                        </Accordion>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="99.0" styleClass="selector" text="Company">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <content>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false" collapsible="false" text="Company Details" />
+                              <TitledPane animated="false" collapsible="false" text="Employee Types" />
+                              <TitledPane animated="false" collapsible="false" layoutX="10.0" layoutY="37.0" text="All Departments" />
+                           </panes>
+                        </Accordion>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="99.0" styleClass="selector" text="Settings">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <content>
+                        <Accordion>
+                           <panes>
+                              <TitledPane animated="false" collapsible="false" text="Apply Leave" />
+                              <TitledPane animated="false" collapsible="false" text="Leave Requests" />
+                           </panes>
+                        </Accordion>
+                     </content>
+                  </TitledPane>
+               </panes>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Accordion>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <StackPane styleClass="container" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane hmin="1100.0" hvalue="1100.0" minWidth="1100.0" styleClass="container" vmin="600.0">
+               <content>
+                  <VBox minHeight="600.0" minWidth="1100.0" spacing="10.0" styleClass="container">
+                     <children>
+                        <Label text="Basic Information">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label prefWidth="230.0" text="Name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField promptText="First name">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                              <TextField promptText="Last Name" />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <VBox prefWidth="230.0" spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Personal Email">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="45.0">
+                                       <children>
+                                          <Label text="Gender">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="45.0">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Male">
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="gender1" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Female" toggleGroup="$gender1" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="405.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label prefWidth="100.0" text="Mobile Number">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="230.0">
+                                       <children>
+                                          <Label text="Photo">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="13.0" prefWidth="62.4" text="*">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="865.0" layoutY="10.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label layoutX="10.0" layoutY="10.0" text="Work Information">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox layoutX="10.0" layoutY="208.0">
+                           <children>
+                              <VBox prefWidth="230.0" spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Employee ID">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0">
+                                       <children>
+                                          <Label text="Location">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="96.0">
+                                       <children>
+                                          <Label text="Department">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="132.0">
+                                       <children>
+                                          <Label text="Reporting To">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="168.0">
+                                       <children>
+                                          <Label text="CTC">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="204.0">
+                                       <children>
+                                          <Label text="Seat Location">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="240.0">
+                                       <children>
+                                          <Label text="Work Experience">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="276.0">
+                                       <children>
+                                          <CheckBox mnemonicParsing="false" text="Is a Reporting Manager">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </CheckBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="96.0">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="132.0">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="168.0">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="204.0">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="240.0">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="276.0" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="222.0" layoutY="10.0" prefWidth="230.0" spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label prefWidth="100.0" text="Official Email">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Employee type">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="13.0" prefWidth="62.4" text="*">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0">
+                                       <children>
+                                          <Label prefWidth="100.0" text="Designation">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="82.0">
+                                       <children>
+                                          <Label prefWidth="100.0" text="Employee Level">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="118.0">
+                                       <children>
+                                          <Label prefWidth="100.0" text="Date of Joining">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="154.0">
+                                       <children>
+                                          <Label prefWidth="100.0" text="Extension">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="190.0">
+                                       <children>
+                                          <Label text="Employee Status">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="811.0" layoutY="10.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="82.0">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="118.0">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="154.0">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="190.0">
+                                       <children>
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+               <padding>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </ScrollPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

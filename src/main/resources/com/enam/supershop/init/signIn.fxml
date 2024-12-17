@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.enam.supershop.init.SignInController">
+    <children>
+        <VBox fx:id="leftPane" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="376.0" HBox.hgrow="ALWAYS">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+            <children>
+                <ImageView fitHeight="112.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/logo_small.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </ImageView>
+                <StackPane>
+                    <children>
+                        <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0">
+                            <children>
+                                <Label fx:id="leftPaneLabel1" text="Sign In" wrapText="true">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </Label>
+                                <Label fx:id="leftPaneLabel2" text="Get your needs at your hand" wrapText="true">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                </StackPane>
+                <ImageView fitHeight="80.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/cart(copy).png" />
+                    </image>
+                </ImageView>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="50.0" right="50.0" top="20.0" />
+            </padding>
+        </VBox>
+        <VBox prefHeight="500.0" prefWidth="331.0" HBox.hgrow="ALWAYS">
+            <children>
+            <VBox>
+               <children>
+                      <Label text="Welcome back to">
+                          <font>
+                              <Font size="16.0" />
+                          </font>
+                      </Label>
+                      <Label text="All Goods">
+                          <font>
+                              <Font name="System Bold" size="24.0" />
+                          </font>
+                      </Label>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <VBox>
+                     <children>
+                            <Label fx:id="usernameLabel" text="Username" />
+                            <TextField fx:id="usernameField" promptText="Enter your username" />
+                        <Label fx:id="usernameStatus" styleClass="nonexistent" text="usernameStatus" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                            <Label fx:id="passwordLabel" text="Password" />
+                        <PasswordField fx:id="passwordField" promptText="Enter password" />
+                        <Label fx:id="passwordStatus" styleClass="nonexistent" text="passwordStatus" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Button fx:id="signInButton" mnemonicParsing="false" onAction="#handleSignIn" text="Continue">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="signInStatus" text="Sign Up Successful" visible="false">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+                <Hyperlink fx:id="signUpLink" onAction="#goToSignUp" text="Sign Up">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Hyperlink>
+            </children>
+            <padding>
+                <Insets left="50.0" right="50.0" top="40.0" />
+            </padding>
+        </VBox>
+    </children>
+</HBox>

@@ -1,0 +1,23 @@
+#sidebar {
+    -fx-background-color: #F3F3F3;
+}
+
+.container {
+    -fx-background-color: white;
+}
+
+.accordionSelector .button {
+    -fx-background-color: #001e3d;
+}
+
+.titled-pane .title {
+    -fx-background-color: #f2f2f2;
+}
+
+.titled-pane .title:hover {
+    -fx-background-color: #e6e6e6;
+}
+
+.titled-pane:focused .title {
+    -fx-background-color: #e6e6e6;
+}

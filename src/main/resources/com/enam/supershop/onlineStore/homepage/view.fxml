@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<StackPane alignment="TOP_LEFT" prefHeight="720.0" prefWidth="1280.0" stylesheets="@view.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.enam.supershop.onlineStore.homepage.ViewController">
+   <children>
+      <VBox fx:id="categoryRoot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <HBox prefHeight="50.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" styleClass="container" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ToggleButton fx:id="sidebarBtn" mnemonicParsing="false">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <SVGPath content="M4.32 4.75a1.25 1.25 0 0 0 0 2.5h.01a1.25 1.25 0 1 0 0-2.5zm3.99.5a.75.75 0 1 0 0 1.5h12a.75.75 0 1 0 0-1.5zm0 12a.75.75 0 0 0 0 1.5h12a.75.75 0 1 0 0-1.5zM7.56 12a.75.75 0 0 1 .75-.75h12a.75.75 0 1 1 0 1.5h-12a.75.75 0 0 1-.75-.75m-4.49 0c0-.69.56-1.25 1.25-1.25h.01a1.25 1.25 0 1 1 0 2.5h-.01c-.69 0-1.25-.56-1.25-1.25m1.25 4.75a1.25 1.25 0 1 0 0 2.5h.01a1.25 1.25 0 1 0 0-2.5z" />
+                           </graphic>
+                        </ToggleButton>
+                        <ImageView fitHeight="50.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../images/logo_small.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField promptText="Search product" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Button mnemonicParsing="false" text="Cart">
+                           <graphic>
+                              <SVGPath content="m12 10l-1.4-1.4L12.175 7H8V5h4.175l-1.6-1.6L12 2l4 4zM7 22q-.825 0-1.412-.587T5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22m10 0q-.825 0-1.412-.587T15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22M1 4V2h3.275l4.25 9h7l3.9-7H21.7l-4.4 7.95q-.275.5-.737.775T15.55 13H8.1L7 15h12v2H7q-1.125 0-1.713-.975T5.25 14.05L6.6 11.6L3 4z" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="container" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="container">
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="container" vbarPolicy="NEVER">
+                           <content>
+                              <HBox fx:id="categoryContainer" spacing="20.0" styleClass="container" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <VBox fx:id="sidebar" fillWidth="false" maxWidth="300.0" styleClass="container">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <StackPane.margin>
+            <Insets top="70.0" />
+         </StackPane.margin>
+      </VBox>
+   </children>
+</StackPane>

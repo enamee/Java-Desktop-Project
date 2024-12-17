@@ -1,0 +1,22 @@
+* {
+    -fx-background-color: white;
+}
+
+
+.category {
+    -fx-border-radius: 15;
+    -fx-border-color: black;
+}
+
+.sortBy {
+    -fx-border-radius: 2;
+    -fx-border-color: black;
+
+}
+
+.container {
+    -fx-display: flex;
+
+}
+
+

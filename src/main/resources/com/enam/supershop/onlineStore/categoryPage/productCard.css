@@ -1,0 +1,28 @@
+* {
+    -fx-background-color: white;
+}
+
+#product {
+    -fx-border-color: darkgrey;
+    /*-fx-border-width: 10;*/
+}
+
+#rating {
+    -fx-background-color: forestgreen;
+    -fx-text-fill: white;
+    -fx-background-radius: 2;
+}
+
+#ratingSvg {
+    -fx-fill: white;
+}
+
+#addToCartBtn {
+    -fx-background-color: #4682fa;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+}
+
+#addToCartSvg {
+    -fx-fill: white;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="categoryItem" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="7.0" styleClass="categoryItemContainer" stylesheets="@categoryTemplate.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.enam.supershop.onlineStore.homepage.CategoryTemplate">
+   <children>
+      <Label fx:id="categoryIcon" styleClass="categoryIcon" text="Icon">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <HBox.margin>
+            <Insets top="5.0" />
+         </HBox.margin></Label>
+      <Label fx:id="categoryName" styleClass="categoryName" text="Category">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+   </children>
+</HBox>

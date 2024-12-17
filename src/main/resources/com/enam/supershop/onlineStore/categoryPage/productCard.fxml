@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="product" alignment="TOP_CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="150.0" prefHeight="300.0" prefWidth="170.0" stylesheets="@productCard.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.enam.supershop.onlineStore.categoryPage.ProductCard">
+   <children>
+      <VBox alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fx:id="image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/pran-aromatic-chinigura-premium-rice-2kg.jpeg" />
+               </image>
+            </ImageView>
+            <Label fx:id="name" text="Pran Aromatic Chinigura Rice" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="BOTTOM_CENTER" spacing="2.0">
+         <children>
+            <Label fx:id="quantity" text="2 Kg">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="Tk" textFill="#e50000">
+                     <HBox.margin>
+                        <Insets right="2.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price" text="325" textFill="#e50000">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="discountedPrice" text="Label" textFill="#e50000">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label fx:id="rating" contentDisplay="RIGHT" text="4.0">
+                     <graphic>
+                        <SVGPath fx:id="ratingSvg" content="m12 16.3l-3.7 2.825q-.275.225-.6.213t-.575-.188t-.387-.475t-.013-.65L8.15 13.4l-3.625-2.575q-.3-.2-.375-.525t.025-.6t.35-.488t.6-.212H9.6l1.45-4.8q.125-.35.388-.538T12 3.475t.563.188t.387.537L14.4 9h4.475q.35 0 .6.213t.35.487t.025.6t-.375.525L15.85 13.4l1.425 4.625q.125.35-.012.65t-.388.475t-.575.188t-.6-.213z" scaleX="0.7" scaleY="0.7" />
+                     </graphic>
+                     <padding>
+                        <Insets left="5.0" right="2.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="(" />
+                  <Label fx:id="ratingCount" layoutX="64.0" layoutY="10.0" text="3" />
+                  <Label layoutX="72.0" layoutY="10.0" text=")" />
+               </children>
+            </HBox>
+            <Button fx:id="addToCartBtn" mnemonicParsing="false" onAction="#addProductToCart" text="Add to Cart">
+               <graphic>
+                  <SVGPath fx:id="addToCartSvg" content="M5 13v-1h6V6h1v6h6v1h-6v6h-1v-6z" />
+               </graphic>
+            </Button>
+            <Label fx:id="id" text="ProductID" />
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

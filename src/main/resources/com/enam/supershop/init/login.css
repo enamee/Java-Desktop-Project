@@ -1,0 +1,41 @@
+/*@font-face {*/
+/*    src: url("../../../fonts/MaterialSymbolsOutlined-Regular.ttf");*/
+/*}*/
+
+/** {*/
+/*    -fx-font-family: "Material Symbols Outlined";*/
+/*}*/
+
+#welcome {
+    -fx-font-size: 20px;
+}
+
+#leftPane {
+    -fx-background-color: #60A7EF;
+}
+#rightPane {
+    -fx-background-color: #f5f5f5;
+}
+#textField {
+    -fx-border-color: #358AE0;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-radius: 5;
+}
+
+#leftPaneLabel1 {
+    -fx-text-fill: #001E3D;
+}
+
+#leftPaneLabel2 {
+    -fx-text-fill: #001e3d;
+}
+
+.nonexistent {
+    -fx-text-fill: gray;
+    -fx-visible: false;
+    -fx-managed: false;
+}
+
+.fieldInputStatus {
+    -fx-text-fill: gray;
+}

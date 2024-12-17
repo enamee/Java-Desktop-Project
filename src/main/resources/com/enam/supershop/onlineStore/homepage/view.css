@@ -1,0 +1,40 @@
+.container {
+    -fx-background-color: white;
+}
+
+.categoryImageContainer {
+    -fx-background-color: #f2f2f2;
+    -fx-background-radius: 50;
+    -fx-border-width: 20px;
+    -fx-border-radius: 50%;
+    -fx-border-color: #e6e6e6;
+}
+
+/*.categoryContainer:hover {*/
+/*    -fx-border-color: #358AE0;*/
+/*}*/
+
+.toggle-button {
+    -fx-background-radius: 0;
+    -fx-background-color: white;
+}
+
+.toggle-button:hover {
+    -fx-background-color: #e6e6e6;
+}
+
+.toggle-button:pressed {
+    -fx-background-color: lightseagreen;
+}
+
+.category:hover .categoryContainer {
+    -fx-border-color: #358AE0;
+}
+
+.category:hover .categoryLabel {
+    -fx-text-fill: #358AE0;
+}
+
+#sidebar {
+    -fx-background-color: white;
+}
